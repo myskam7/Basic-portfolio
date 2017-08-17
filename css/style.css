@@ -1,0 +1,166 @@
+body {
+    background-image: url('../images/concrete-texture.png');
+    
+}
+
+#profile-image {
+  float: left;
+  margin: 5px;  
+}
+
+p {
+   clear: both;
+   overflow: auto;
+   padding: 5px;
+   font-size: 15px;    
+}
+
+
+.style {
+    font-size: 40px;
+}
+
+input, textarea {
+    width: 500px; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical;
+    margin-left: 50px;
+    
+}
+
+#input-message {
+    height: 150px;
+    width: 500px;
+ }
+
+.label-input{
+    margin-left: 50px;
+}
+
+input:hover {
+    background-color: #4aaaa5;
+}
+
+.container {
+    
+    top: 300;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    width: 600px;
+    height: 500px;
+    margin-left: 250px;
+    margin-top: 60px;
+    font-family:  'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+
+
+
+header{
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    width: 100%;
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+ul {
+    float: right;
+    position: relative;
+    list-style-type: none;
+    margin-top: 70px;
+    margin: 300;
+    padding: 0;
+    
+}
+
+li {
+    float: right;
+    border-left: 1px solid silver;
+    margin-right: 5px;
+    
+}
+
+
+li a {
+   
+    color: #595757;
+    text-align: center;
+    padding: 0px ;
+    margin-right: 50px;
+    padding-bottom: 20px;
+    text-decoration: none;
+}
+
+
+
+
+ h1 {
+    border-top: 5px solid rgb(255, 255, 255);
+    padding-top: 55px;
+    text-align: center;
+    color: white;
+    background-color: #4aaaa5;
+    width:300px;
+    height: 80px;
+    margin: 0;
+    margin-left: 245px;
+
+}
+
+
+.links {
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    text-align: center;
+    font-size: px;
+    position: relative;
+    float: right;
+    right: 370px;
+    bottom: 540px;
+    width: 280px;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    
+
+}
+li {
+    font-size: 18px;
+}
+h3  {
+   
+    border-bottom: 1px solid coral;
+    text-align: center;
+    padding-bottom: 10px;
+    margin: 20px 15px 20px 15px;
+
+}
+
+h4 {
+    font-size: 34px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid coral;
+    margin-right: 50px;
+    padding-bottom: 20px;
+
+
+}
+
+
+footer{ 
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 20px;
+    width: 100%;
+    background-color: #2A2929;
+    margin-top: 60px;
+    padding: 40px 0 50px 0;
+    text-align: center;
+    color: white;
+    border-top: 5px solid #4aaaa5;
+    position:fixed;
+}
