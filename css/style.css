@@ -1,36 +1,140 @@
 body {
     background-image: url('../images/concrete-texture.png');
-    
+    margin: auto;
+    padding: 0px;
+    box-sizing: border-box;
+    /* font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; */
 }
 
+/* Header */
+header{
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    width: 100%;
+    font-size: 30px;
+    height: 20%;
+    /* margin: 0px; */
+    padding: 0px;
+    background-color: rgb(255, 255, 255);
+    display: inline-flex;
+    /* margin: auto; */
+    /* padding-bottom: 100px; */
+}
+
+
+/* ul {
+    padding-top: 50px;
+    /* float: left; */
+    /* position: relative;
+    list-style-type: none;
+    margin-top: 50px; */
+   
+    
+    /* top: 40%; */
+    /* width: 30%;
+    left: 15%; */
+    /* left: 30%;
+    left: 50%; */
+    /* left: -15%; */
+    /* display: -webkit-box; */
+    
+/* } */ 
+#navbarNav{
+    width: 50%;
+    align-items: flex-end;
+}
+.navbar-nav{
+   align-items: flex-end;
+}
+.name{
+    /* display: inline-flex; */
+}
+.btn{
+    display: inline-flex;
+}
+li {
+    /* float: left; */
+    /* border-left: 1px solid #929090; */
+    /* margin-right: 5px; */
+    
+    /* display: -webkit-box; */
+}
+
+
+li a {
+   
+    color: #595757;
+    text-align: center;
+    position: relative;
+    top: 10%;
+    right: 15%;
+    padding-bottom: 20px;
+    text-decoration: none;
+    padding-left: 20px;
+}
+.title {
+    margin: 0px;
+    width: 100%;
+    background-color: white;
+    text-align: start;
+}
+h1 {
+    /* border-top: 5px solid rgb(255, 255, 255);
+    padding-top: 55px;
+    background-color: #4aaaa5;
+    width:100%;
+    height: 30%;
+    position: relative;
+    display: inline-flex; */
+    color: lightcoral;
+    
+
+}
+  
+#profile-image{
+    margin: 5px;
+    align-items: flex-start;
+    
+ }
+
+ p{
+    word-wrap: break-word;
+    /* margin-right: 60px; */
+    display: inline;
+      /* right: 40%;  */
+      /* text-align: center; */
+ }
+
+/* About Page
 #profile-image {
-  float: left;
+  
   margin: 5px;  
+  display: -webkit-flex;
+}
+
+#text-image{
+
 }
 
 p {
-   clear: both;
-   overflow: auto;
+   
+    
    padding: 5px;
    font-size: 15px;    
-}
+} */
 
 
-.style {
-    font-size: 40px;
-}
-
+/* Contact Page */
 input, textarea {
-    width: 500px; 
+    width: 40%; 
     padding: 12px; 
     border: 1px solid #ccc; 
     box-sizing: border-box; 
     margin-top: 6px; 
     margin-bottom: 16px; 
-    resize: vertical;
-    margin-left: 50px;
     
-}
+    margin-left: 50px;
+
+} 
 
 #input-message {
     height: 150px;
@@ -45,89 +149,60 @@ input:hover {
     background-color: #4aaaa5;
 }
 
-.container {
-    
-    top: 300;
-    background-color: rgb(255, 255, 255);
-    padding: 20px;
-    width: 600px;
-    height: 500px;
-    margin-left: 250px;
-    margin-top: 60px;
-    font-family:  'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-}
-
-
-
-
-header{
-    font-family: 'Georgia', Times, Times New Roman, serif;
-    width: 100%;
-    font-size: 30px;
-    margin: 0;
-    padding: 0;
-    background-color: rgb(255, 255, 255);
-}
-
-ul {
-    float: right;
-    position: relative;
-    list-style-type: none;
-    margin-top: 70px;
-    margin: 300;
-    padding: 0;
-    
-}
-
-li {
-    float: right;
-    border-left: 1px solid silver;
-    margin-right: 5px;
-    
-}
-
-
-li a {
-   
-    color: #595757;
-    text-align: center;
-    padding: 0px ;
-    margin-right: 50px;
-    padding-bottom: 20px;
-    text-decoration: none;
-}
-
-
-
-
- h1 {
-    border-top: 5px solid rgb(255, 255, 255);
-    padding-top: 55px;
-    text-align: center;
+.container{
     color: white;
-    background-color: #4aaaa5;
-    width:300px;
-    height: 80px;
-    margin: 0;
-    margin-left: 245px;
+    max-width: 800px;
+    /* width: 40%; */
+    /* width: 90%; */
+    background-color: #434a52;
+    /* margin-top: 100px; */
+    padding: 10% 5% ;
+    /* position: relative;
+    right: 10px; */
+    border-top: 10px solid #ffa949;
+    margin: auto;
+    /* overflow-wrap: align-self: auto; */
+    /* overflow: hidden; */
 
+    
+    /* position: relative; */
+     /* margin: auto; */
+    /* top: 30; */ 
+    /* background-color: rgb(255, 255, 255); */
+    /* padding: 20px; */
+    /* width: 40%; */
+    /* height: 500px; */
+    
+    
+    
 }
 
-
+ 
 .links {
+    
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
     text-align: center;
     font-size: px;
-    position: relative;
+    position: fixed;
     float: right;
-    right: 370px;
-    bottom: 540px;
-    width: 280px;
-    height: 200px;
-    background-color: rgb(255, 255, 255);
+    right: 17%;
+   bottom: 500px;
+   /* position: relative;
+   bottom: 100px;
+    width: 100%;
+    height: 100px;
+    padding-bottom: 50px;
+    margin-top: 70px; */
+    background-color: rgb(129, 129, 129);
+    box-sizing: 1.5;
     
-
 }
+
+a:hover{
+    color: lightcoral;
+    box-shadow: 4px;
+}
+
 li {
     font-size: 18px;
 }
@@ -136,16 +211,17 @@ h3  {
     border-bottom: 1px solid coral;
     text-align: center;
     padding-bottom: 10px;
-    margin: 20px 15px 20px 15px;
+    /* margin: 20px 15px 20px 15px; */
 
 }
 
 h4 {
+    position: relative;
     font-size: 34px;
-    margin-left: 50px;
+    left: 5%;
     margin-bottom: 20px;
     border-bottom: 2px solid coral;
-    margin-right: 50px;
+    right: 5%;
     padding-bottom: 20px;
 
 
@@ -157,10 +233,47 @@ footer{
     font-size: 20px;
     width: 100%;
     background-color: #2A2929;
-    margin-top: 60px;
+    /* margin-top: 60px; */
     padding: 40px 0 50px 0;
     text-align: center;
     color: white;
     border-top: 5px solid #4aaaa5;
     position:fixed;
+    bottom: 0%;
 }
+   
+
+
+@media (min-width:768px) {
+    .link {
+
+      
+       position: relative;
+       bottom: 100px;
+        width: 100%;
+        height: 100px;
+        padding-bottom: 50px;
+        margin-top: 70px;
+      
+    }
+    ul {
+        padding-top: 50px;
+        /* float: left; */
+        position: relative;
+        list-style-type: none;
+        margin-top: 50px;
+       
+        
+        /* top: 40%; */
+        /* width: 30%;
+        left: 15%;
+        left: 30%;
+        left: 50%; */
+        /* left: -15%; */
+        display: -webkit-box;
+  }
+}
+  @media screen and (max-width:768px) {
+   
+  }
+
