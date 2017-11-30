@@ -76,7 +76,7 @@
                         $('#inputMessage').val('');
                         $('.statusMsg').html('<span style="color:green;">Thanks for contacting us, we\'ll get back to you soon.</p>');
                     }else{
-                        $('.statusMsg').html('<span style="color:red;">Some problem occurred, please try again.</span>');
+                        $('.statusMsg').html('<span style="color:red;">Some problem occurred, please try again.</span>' + msg);
                     }
                     $('.submitBtn').removeAttr("disabled");
                     $('.modal-body').css('opacity', '');
