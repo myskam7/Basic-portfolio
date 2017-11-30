@@ -80,3 +80,9 @@ width: 640px;
 #Fcontain {
 	flex-flow: column;
 }
+
+
+label {
+	display: flex;
+	color: gray;
+}
