@@ -9,7 +9,6 @@ body {
 }
 
 
-
 .accordian {
 	/* width: 805px; height: 460px; */
 	overflow: hidden;
@@ -73,10 +72,4 @@ width: 640px;
 	text-decoration: none;
 	padding: 20px;
 	font-size: 16px;
-}
-
-/* syling for the email form in Contact */
-
-#Fcontain {
-	flex-flow: column;
 }

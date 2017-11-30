@@ -18,10 +18,22 @@
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
 
+
+         <!-- Latest minified bootstrap css -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+        <!-- Latest minified bootstrap js -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <!-- Custom styles for this template -->
     <link href="css/grayscale.min.css" rel="stylesheet">
-
+   <!-- general styling -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
+   <!-- contact styling -->
+    <link rel="stylesheet" type="text/css" href="css/contactStyle.css">
 
   </head>
 
@@ -120,9 +132,9 @@
       </li>
       <li>
         <div class="image_title">
-          <a href="#"></a>
+          <a href="https://dark-tomb-19680.herokuapp.com/"  target="_blank">New York Times React</a>
         </div>
-        <a href="#">
+        <a href="https://dark-tomb-19680.herokuapp.com/"  target="_blank">
           <img src="./img/nytReact.jpg" height="450" width="800px"/>
         </a>
       </li>
@@ -157,6 +169,138 @@
             <h2>Contact</h2>
             <p>
             <ul class="list-inline banner-social-buttons">
+
+
+                <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
+               
+                
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form>
+                          <div class="form-group">
+                            <label for="recipient-name" class="form-control-label">Recipient:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                          </div>
+                          <div class="form-group">
+                            <label for="message-text" class="form-control-label">Message:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Send message</button>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+
+
+
+                <!-- Button to trigger modal -->
+<button class="btn btn-success btn-lg" data-toggle="modal" data-target="#modalForm">
+    Open Contact Form
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="modalForm" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Contact Form</h4>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <p class="statusMsg"></p>
+                <form role="form">
+                    <div class="form-group">
+                        <label for="inputName">Name</label>
+                        <input type="text" class="form-control" id="inputName" placeholder="Enter your name"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail">Email</label>
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputMessage">Message</label>
+                        <textarea class="form-control" id="inputMessage" placeholder="Enter your message"></textarea>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary submitBtn" onclick="submitContactForm()">SUBMIT</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function submitContactForm(){
+        var reg = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+        var name = $('#inputName').val();
+        var email = $('#inputEmail').val();
+        var message = $('#inputMessage').val();
+        if(name.trim() == '' ){
+            alert('Please enter your name.');
+            $('#inputName').focus();
+            return false;
+        }else if(email.trim() == '' ){
+            alert('Please enter your email.');
+            $('#inputEmail').focus();
+            return false;
+        }else if(email.trim() != '' && !reg.test(email)){
+            alert('Please enter valid email.');
+            $('#inputEmail').focus();
+            return false;
+        }else if(message.trim() == '' ){
+            alert('Please enter your message.');
+            $('#inputMessage').focus();
+            return false;
+        }else{
+            $.ajax({
+                type:'POST',
+                url:'submit_form.php',
+                data:'contactFrmSubmit=1&name='+name+'&email='+email+'&message='+message,
+                beforeSend: function () {
+                    $('.submitBtn').attr("disabled","disabled");
+                    $('.modal-body').css('opacity', '.5');
+                },
+                success:function(msg){
+                    if(msg == 'ok'){
+                        $('#inputName').val('');
+                        $('#inputEmail').val('');
+                        $('#inputMessage').val('');
+                        $('.statusMsg').html('<span style="color:green;">Thanks for contacting us, we\'ll get back to you soon.</p>');
+                    }else{
+                        $('.statusMsg').html('<span style="color:red;">Some problem occurred, please try again.</span>');
+                    }
+                    $('.submitBtn').removeAttr("disabled");
+                    $('.modal-body').css('opacity', '');
+                }
+            });
+        }
+    }
+    </script>
+
+
+
               <li class="list-inline-item">
                 <!-- <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg">
                   <i class="fa fa-twitter fa-fw"></i>
@@ -190,6 +334,10 @@
         <p>Copyright &copy; Maksym Filippov 2017</p>
       </div>
     </footer>
+
+
+    
+
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
