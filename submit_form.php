@@ -8,11 +8,11 @@ require 'vendor/autoload.php';
 
 $from = new SendGrid\Email(null, "test@example.com");
 $subject = "Hello World from the SendGrid PHP Library!";
-$to = new SendGrid\Email(null, "test@example.com");
+$to = new SendGrid\Email(null, "mksmflppv98@gmail.com");
 $content = new SendGrid\Content("text/plain", "Hello, Email!");
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
-$apiKey = getenv('SENDGRID_API_KEY');
+$apiKey = getenv('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');
 $sg = new \SendGrid($apiKey);
 
 $response = $sg->client->mail()->send()->post($mail);
