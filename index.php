@@ -63,7 +63,7 @@
         }else{
             $.ajax({
                 type:'POST',
-                url:'submit_form.php',
+                url:'https://powerful-headland-42644.herokuapp.com/submit_form.php',
                 data:'contactFrmSubmit=1&name='+name+'&email='+email+'&message='+message,
                 beforeSend: function () {
                     $('.submitBtn').attr("disabled","disabled");
