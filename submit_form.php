@@ -1,5 +1,5 @@
 <?php
-<?php
+
 // If you are using Composer
 require 'vendor/autoload.php';
 
