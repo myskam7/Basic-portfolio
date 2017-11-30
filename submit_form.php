@@ -9,7 +9,7 @@ if(isset($_POST['contactFrmSubmit']) && !empty($_POST['name']) && !empty($_POST[
     /*
      * Send email to admin
      */
-    $to     = 'admin@example.com';
+    $to     = 'mksmflppv98@gmail.com';
     $subject= 'Contact Request Submitted';
     
     $htmlContent = '
