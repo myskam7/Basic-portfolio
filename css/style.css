@@ -100,3 +100,24 @@ label {
 	display: flex;
 	color: gray;
 }
+
+
+// General Styling
+// Requires Bootstrap 3 for styling
+
+body { background-color: #f5f5f5; }
+
+.contact {
+ 
+  max-width: 200px;
+  margin: 30px auto;
+}
+
+.icon {
+	background: #3dbf8e;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  margin: 0;
+  vertical-align: middle;
+}
